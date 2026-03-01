@@ -27,10 +27,7 @@ padding:10px;
 position:sticky;
 top:0;
 }
-nav a{
-color:white;
-text-decoration:none;
-}
+nav a{color:white;text-decoration:none;}
 nav a:hover{color:gold;}
 
 .section{padding:40px 20px;max-width:1100px;margin:auto;}
@@ -85,8 +82,6 @@ max-height:400px;
 overflow-y:auto;
 }
 
-.cart-box h3{color:gold;margin-bottom:10px;}
-
 footer{
 background:#000;
 text-align:center;
@@ -138,33 +133,25 @@ box-shadow:0 0 15px rgba(0,0,0,0.4);
 
 <div class="card">
 <h3>Veg Burger</h3>
-<select id="vegBurger">
-<option value="30">Regular - ₹30</option>
-</select>
+<select id="vegBurger"><option value="30">Regular - ₹30</option></select>
 <button onclick="addToCart('Veg Burger','vegBurger')">Add to Cart</button>
 </div>
 
 <div class="card">
 <h3>Paneer Burger</h3>
-<select id="paneerBurger">
-<option value="35">Regular - ₹35</option>
-</select>
+<select id="paneerBurger"><option value="35">Regular - ₹35</option></select>
 <button onclick="addToCart('Paneer Burger','paneerBurger')">Add to Cart</button>
 </div>
 
 <div class="card">
 <h3>Cheese Burger</h3>
-<select id="cheeseBurger">
-<option value="40">Regular - ₹40</option>
-</select>
+<select id="cheeseBurger"><option value="40">Regular - ₹40</option></select>
 <button onclick="addToCart('Cheese Burger','cheeseBurger')">Add to Cart</button>
 </div>
 
 <div class="card">
 <h3>Crunchy Burger</h3>
-<select id="crunchyBurger">
-<option value="60">Regular - ₹60</option>
-</select>
+<select id="crunchyBurger"><option value="60">Regular - ₹60</option></select>
 <button onclick="addToCart('Crunchy Burger','crunchyBurger')">Add to Cart</button>
 </div>
 
@@ -293,7 +280,7 @@ box-shadow:0 0 15px rgba(0,0,0,0.4);
 © 2026 Shree Shyam Fast Food Corner
 </footer>
 
-<a href="https://wa.me/qr/ILGPDKM3UVUQC1" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/918448746463hatsapp-float" target="_whatsapp
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
 
@@ -321,15 +308,23 @@ document.getElementById("total").innerText=total;
 
 function checkout(){
 if(cart.length===0){alert("Cart is empty");return;}
-let message="Hello I want to order:\n\n";
+
 let total=0;
-cart.forEach(p=>{
-message+=`${p.item} (${p.plate}) - ₹${p.price}\n`;
+let invoice="🧾 *Shree Shyam Fast Food Corner Invoice*\n";
+invoice+="-----------------------------------\n";
+
+cart.forEach((p,i)=>{
 total+=p.price;
+invoice+=`${i+1}. ${p.item}\n   ${p.plate}\n   ₹${p.price}\n\n`;
 });
-message+=`\nTotal: ₹${total}`;
-let url=`https://wa.me/qr/ILGPDKM3UVUQC1?text=${encodeURIComponent(message)}`;
-window.open(url,"_blank");
+
+invoice+="-----------------------------------\n";
+invoice+=`💰 *Total Amount: ₹${total}*\n`;
+invoice+="Thank you 🙏";
+
+let phone="918448746463
+let url=`https://wa.me/${84484746463}deURIComponent(invoice)}`;
+window.open(url,"_https://wa.me/qr/ILGPDKM3UVUQC1");
 }
 </script>
 
